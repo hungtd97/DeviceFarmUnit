@@ -22,7 +22,7 @@ export default {
     console.log(this.clock);
     return {
       id: this.clock.id,
-      number: this.clock.number,
+      number: Math.round(this.clock.number * 1000)/1000,
       timestamp: this.clock.timeUpdated
     };
   },
@@ -47,13 +47,21 @@ export default {
 <style lang="scss">
 .clock-item{
   width: 50%;
-  border: 1px solid grey;
   margin-bottom: 30px;
 }
 .clock-title {
   width: 100%;
 }
 .clock-number {
-  width: 100%;
+  display: inline-block;
+  font-family: 'digital-clock-font';
+  font-size: 35px;
+  border: 1px solid grey;
+  padding: 3px 20px;
+}
+
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('../assets/fonts/digital-7.ttf');
 }
 </style>

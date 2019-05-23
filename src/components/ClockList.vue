@@ -11,6 +11,7 @@
       name="fade"
       enter-active-class="animated fadeInUp"
       leave-active-class="animated fadeOutDown"
+      class="item-group"
     >
       <clock-item
         v-for="clock in clocksFiltered"
@@ -147,6 +148,11 @@ button {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+.item-group{
+  display: flex;
+  width: 100%;
 }
 
 // CSS Spinning Loader

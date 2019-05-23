@@ -23,8 +23,9 @@ export default {
 }
 
 .container {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
+  text-align: center
 }
 
 
